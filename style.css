@@ -151,8 +151,8 @@ main { padding: 0 48px; }
 }
 .logo-footer-img {
   display: block;
-  width: 105%;
-  max-width: 105%;
+  width: 115%;
+  max-width: 115%;
   height: 110px;
   object-fit: contain;
   margin-bottom: 0;
