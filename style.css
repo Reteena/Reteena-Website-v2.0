@@ -23,14 +23,8 @@ header {
   font-size: 18px;
   font-weight: 400;
 }
-.logo {
-  font-weight: 400;
-}
-.header-right {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
+.logo { font-weight: 400; }
+.header-right { display: flex; gap: 24px; align-items: center; }
 .header-right .github-link {
   display: inline-flex;
   align-items: center;
@@ -44,13 +38,8 @@ header {
   text-decoration: none;
 }
 
-main {
-  padding: 0 48px;
-}
-.intro {
-  margin-top: 54px;
-  margin-bottom: 45px;
-}
+main { padding: 0 48px; }
+.intro { margin-top: 54px; margin-bottom: 45px; }
 .intro h1 {
   font-size: 40px;
   font-weight: 400;
@@ -65,14 +54,8 @@ main {
   line-height: 1.4;
   font-weight: 300;
 }
-.divider {
-  border: none;
-  border-top: 1px solid #dedede;
-  margin: 48px 0;
-}
-.project {
-  margin-bottom: 48px;
-}
+.divider { border: none; border-top: 1px solid #dedede; margin: 48px 0; }
+.project { margin-bottom: 48px; }
 .project-index {
   color: #868686;
   display: block;
@@ -87,11 +70,7 @@ main {
   align-items: flex-end;
   margin-bottom: 10px;
 }
-.project-title {
-  font-size: 23px;
-  font-weight: 400;
-  margin-bottom: 0;
-}
+.project-title { font-size: 23px; font-weight: 400; margin-bottom: 0; }
 .learn-more {
   font-size: 13px;
   padding: 3px 14px;
@@ -112,27 +91,29 @@ main {
   border-radius: 2px;
   margin: 12px 0 16px 0;
 }
-.tags {
+
+.tags.small-tags {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 9px;
+  flex-wrap: nowrap;
+  margin-bottom: 7px;
+  margin-top: 3px;
 }
 .tag {
-  font-size: 19px;
+  font-size: 15px;
   color: #7c7c7c;
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   background: transparent;
   border: 2px solid #969696;
-  border-radius: 20px;
-  padding: 2px 16px 3px 16px;
-  margin-bottom: 8px;
+  border-radius: 18px;
+  padding: 2px 14px 3px 14px;
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: 0.01em;
   box-sizing: border-box;
-  transition: border-color 0.15s;
   display: inline-block;
 }
+
 .desc {
   font-size: 16px;
   opacity: 0.91;
@@ -141,9 +122,7 @@ main {
   font-weight: 300;
   line-height: 1.33;
 }
-.justified {
-  text-align: justify;
-}
+.justified { text-align: justify; }
 .logo-footer-container {
   margin: 60px auto 0 auto;
   width: 100%;
@@ -151,6 +130,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.logo-footer-container.no-bg {
+  background: none;
 }
 .logo-footer-img {
   display: block;
@@ -160,7 +142,7 @@ main {
   object-fit: contain;
   margin-bottom: 0;
   border-radius: 2px;
-  background: #eee;
+  background: none;
 }
 footer {
   display: flex;
@@ -175,16 +157,7 @@ footer {
   opacity: 0.9;
 }
 @media screen and (max-width: 780px) {
-  .frame {
-    margin: 0;
-    max-width: none;
-    border: none;
-  }
-  header, main {
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-  .logo-footer-img {
-    height: 68px;
-  }
-}
+  .frame { margin: 0; max-width: none; border: none; }
+  header, main { padding-left: 5vw; padding-right: 5vw; }
+  .logo-footer-img { height: 68px; }
+
