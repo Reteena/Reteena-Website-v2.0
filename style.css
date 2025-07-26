@@ -114,20 +114,20 @@ main {
 }
 .tags {
   display: flex;
-  gap: 18px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 .tag {
-  font-size: 22px;
+  font-size: 19px;
   color: #7c7c7c;
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   background: transparent;
   border: 2px solid #969696;
-  border-radius: 22px;
-  padding: 2px 22px 3px 22px;
+  border-radius: 20px;
+  padding: 2px 16px 3px 16px;
   margin-bottom: 8px;
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 1.1;
   letter-spacing: 0.01em;
   box-sizing: border-box;
   transition: border-color 0.15s;
@@ -187,4 +187,4 @@ footer {
   .logo-footer-img {
     height: 68px;
   }
-
+}
