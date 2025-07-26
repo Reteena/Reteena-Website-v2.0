@@ -104,7 +104,7 @@ main { padding: 0 48px; }
   color: #7c7c7c;
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   background: transparent;
-  border: 2px solid #969696;
+  border: 1px solid #969696;  /* thinner border */
   border-radius: 18px;
   padding: 2px 14px 3px 14px;
   font-weight: 400;
@@ -160,4 +160,4 @@ footer {
   .frame { margin: 0; max-width: none; border: none; }
   header, main { padding-left: 5vw; padding-right: 5vw; }
   .logo-footer-img { height: 68px; }
-
+}
