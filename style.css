@@ -4,6 +4,7 @@ body {
   background: #fff;
   color: #111;
 }
+
 .frame {
   margin: 8px auto;
   max-width: 700px;
@@ -13,14 +14,16 @@ body {
   box-sizing: border-box;
   position: relative;
 }
+
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Both items on the same line */
+  align-items: center;
   padding: 36px 48px 0 48px;
   font-size: 18px;
   font-weight: 400;
 }
+
 .logo {
   font-weight: 400;
   font-size: 1.3rem;
@@ -28,21 +31,34 @@ header {
   align-items: center;
   line-height: 1;
 }
+
 .github-link svg {
   height: 1.1em;
   width: 1.7em;
   vertical-align: middle;
   display: inline-block;
 }
-.header-right { display: none; /* Team link removed */ }
-main { padding: 0 48px; }
-.intro { margin-top: 54px; margin-bottom: 45px; }
+
+.header-right { 
+  display: none; 
+}
+
+main { 
+  padding: 0 48px; 
+}
+
+.intro { 
+  margin-top: 54px; 
+  margin-bottom: 45px; 
+}
+
 .intro h1 {
   font-size: 40px;
   font-weight: 400;
   line-height: 1.07;
   margin-bottom: 16px;
 }
+
 .subtitle {
   font-size: 18px;
   margin: 0;
@@ -51,8 +67,17 @@ main { padding: 0 48px; }
   line-height: 1.4;
   font-weight: 300;
 }
-.divider { border: none; border-top: 1px solid #dedede; margin: 48px 0; }
-.project { margin-bottom: 48px; }
+
+.divider { 
+  border: none; 
+  border-top: 1px solid #dedede; 
+  margin: 48px 0; 
+}
+
+.project { 
+  margin-bottom: 48px; 
+}
+
 .project-index {
   color: #868686;
   display: block;
@@ -61,15 +86,20 @@ main { padding: 0 48px; }
   font-size: 18px;
   letter-spacing: 1px;
 }
+
 .project-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 10px;
 }
-.project-title { font-size: 23px; font-weight: 400; margin-bottom: 0; }
 
-/* New Learn More Button CSS */
+.project-title { 
+  font-size: 23px; 
+  font-weight: 400; 
+  margin-bottom: 0; 
+}
+
 .button-11 {
   display: flex;
   flex-direction: row;
@@ -90,10 +120,12 @@ main { padding: 0 48px; }
   transition: box-shadow 0.15s;
   outline: none;
 }
+
 .button-11:focus {
   box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.2);
   outline: 0;
 }
+
 .button-11 svg {
   display: inline-block;
   vertical-align: middle;
@@ -101,6 +133,7 @@ main { padding: 0 48px; }
   width: 1em;
   margin-left: 5px;
 }
+
 .project-img-placeholder {
   background: #ccc;
   width: 100%;
@@ -108,6 +141,7 @@ main { padding: 0 48px; }
   border-radius: 2px;
   margin: 12px 0 16px 0;
 }
+
 .tags.small-tags {
   display: flex;
   gap: 9px;
@@ -115,12 +149,13 @@ main { padding: 0 48px; }
   margin-bottom: 7px;
   margin-top: 3px;
 }
+
 .tag {
   font-size: 15px;
   color: #7c7c7c;
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   background: transparent;
-  border: 1px solid #969696;  /* thinner border */
+  border: 1px solid #969696;
   border-radius: 18px;
   padding: 2px 14px 3px 14px;
   font-weight: 400;
@@ -129,6 +164,7 @@ main { padding: 0 48px; }
   box-sizing: border-box;
   display: inline-block;
 }
+
 .desc {
   font-size: 16px;
   opacity: 0.91;
@@ -137,7 +173,11 @@ main { padding: 0 48px; }
   font-weight: 300;
   line-height: 1.33;
 }
-.justified { text-align: justify; }
+
+.justified { 
+  text-align: justify; 
+}
+
 .logo-footer-container {
   margin: 60px auto 0 auto;
   width: 100%;
@@ -146,19 +186,22 @@ main { padding: 0 48px; }
   justify-content: center;
   align-items: center;
 }
+
 .logo-footer-container.no-bg {
   background: none;
 }
+
 .logo-footer-img {
   display: block;
-  width: 130%;
-  max-width: 130%;
+  width: 180px;
   height: 110px;
   object-fit: contain;
   margin-bottom: 0;
   border-radius: 2px;
-  background: none;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
 }
+
 footer {
   display: flex;
   flex-direction: column;
@@ -166,13 +209,27 @@ footer {
   justify-content: center;
   margin-top: 24px;
 }
+
 .copyright {
   font-size: 14px;
   color: #222;
   opacity: 0.9;
 }
-@media screen and (max-width: 780px) {
-  .frame { margin: 0; max-width: none; border: none; }
-  header, main { padding-left: 5vw; padding-right: 5vw; }
-  .logo-footer-img { height: 68px; }
 
+@media screen and (max-width: 780px) {
+  .frame { 
+    margin: 0; 
+    max-width: none; 
+    border: none; 
+  }
+  
+  header, main { 
+    padding-left: 5vw; 
+    padding-right: 5vw; 
+  }
+  
+  .logo-footer-img { 
+    height: 68px; 
+    width: 140px; 
+  }
+}
