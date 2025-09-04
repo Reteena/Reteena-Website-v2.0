@@ -139,6 +139,11 @@ body {
   font-weight: 600;
   transition: all 0.3s ease;
 }
+
+.github-link:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
 .github-link svg {
   height: 1.1em;
   width: 1.7em;
@@ -146,7 +151,6 @@ body {
   display: inline-block;
 }
 
-/* Main content */
 /* Main content */
 main { 
   padding: 100px 48px 0 48px; 
@@ -363,10 +367,6 @@ html {
     padding-left: 5vw;
     padding-right: 5vw;
     width: 100%;
-  }
-  
-  .github-link {
-    padding-left: 75px;
   }
   
   .intro h1 {
