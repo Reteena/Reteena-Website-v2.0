@@ -16,34 +16,34 @@ body {
   position: relative;
 }
 
-/* Header Container */
-.header-container {
+/* Header */
+.header {
   position: fixed;
   top: 8px;
   left: 50%;
   transform: translateX(-50%);
   width: 700px;
-  max-width: 700px;
   z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-/* Glass Header Styles */
-.glass-header {
+.header-container {
   position: relative;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Scrolled state - show liquid glass effect */
+.header.scrolled .header-container {
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 16px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
-.glass-header.scrolled {
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+.header.scrolled .glass-container {
+  opacity: 1;
 }
 
 .glass-container {
@@ -52,7 +52,8 @@ body {
   border-radius: 16px;
   height: 100%;
   width: 100%;
-  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .glass-effect-backdrop {
@@ -62,31 +63,27 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  backdrop-filter: blur(0.5px);
   -webkit-backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(0.5px);
 }
 
 .glass-effect {
   border-radius: 9999px;
   position: absolute;
-  backdrop-filter: url(#distortion);
+  left: 0px;
+  right: 0;
+  height: 0.8rem;
+  width: 100%;
   -webkit-backdrop-filter: url(#distortion);
+  backdrop-filter: url(#distortion);
 }
 
 .glass-effect.top {
   top: 0;
-  left: 0px;
-  right: 0;
-  height: 0.8rem;
-  width: 100%;
 }
 
 .glass-effect.bottom {
   bottom: 0;
-  left: 0px;
-  right: 0;
-  height: 0.8rem;
-  width: 100%;
 }
 
 .glass-effect.left {
@@ -99,6 +96,7 @@ body {
 
 .glass-effect.right {
   right: 0;
+  left: auto;
   top: 0;
   bottom: 0;
   width: 0.8rem;
@@ -147,7 +145,7 @@ body {
   display: inline-block;
 }
 
-/* Main content with top padding to account for fixed header */
+/* Main content */
 main { 
   padding: 120px 48px 0 48px; 
 }
@@ -195,8 +193,6 @@ main {
   line-height: 1.4;
   font-weight: 300;
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 .divider { 
@@ -308,52 +304,20 @@ main {
   text-align: justify; 
 }
 
-/* Fade in animation for page load */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Stagger animations for content */
-.intro {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.project:nth-child(3) {
-  animation: fadeInUp 0.8s ease-out 0.2s both;
-}
-
-.project:nth-child(5) {
-  animation: fadeInUp 0.8s ease-out 0.4s both;
-}
-
-.glass-header {
-  animation: fadeInUp 0.8s ease-out 0.1s both;
-}
-
-/* Image hover effects */
+/* Hover effects */
 img:hover {
   transform: scale(1.02);
 }
 
-/* Tag hover effects */
 .tag:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* GitHub icon hover */
 .github-link:hover {
   transform: rotate(5deg) scale(1.1);
 }
 
-/* Project sections hover */
 .project:hover {
   transform: translateY(-5px);
 }
@@ -368,7 +332,7 @@ html {
   transition: all 0.3s ease;
 }
 
-/* Footer redesign - no margin */
+/* Footer - no bottom margin */
 .footer-section {
   margin: 60px 0 0 0;
   text-align: center;
@@ -390,7 +354,7 @@ html {
     border: none; 
   }
   
-  .header-container {
+  .header {
     top: 0;
     width: 100%;
     max-width: none;
