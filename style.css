@@ -7,7 +7,7 @@ body {
 }
 
 .frame {
-  margin: 8px auto;
+  margin: 0 auto;
   max-width: 700px;
   min-height: 100vh;
   background: #fff;
@@ -16,10 +16,10 @@ body {
   position: relative;
 }
 
-/* Header */
+/* Header - no gap from top */
 .header {
   position: fixed;
-  top: 8px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 700px;
@@ -109,7 +109,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 20px 40px;
   font-size: 18px;
   font-weight: 400;
 }
@@ -126,12 +126,12 @@ body {
 .github-link {
   display: flex;
   align-items: center;
-  gap: 8px;
   text-decoration: none;
   color: #000;
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
+  margin-left: auto;
 }
 
 .github-link:hover {
@@ -147,7 +147,7 @@ body {
 
 /* Main content */
 main { 
-  padding: 120px 48px 0 48px; 
+  padding: 100px 48px 0 48px; 
 }
 
 .intro { 
@@ -163,6 +163,9 @@ main {
   margin-bottom: 16px;
   text-align: center;
   white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Dotted contour around "rethink" */
@@ -368,6 +371,7 @@ html {
   .intro h1 {
     white-space: normal;
     font-size: 32px;
+    display: block;
   }
   
   main { 
