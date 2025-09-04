@@ -129,7 +129,6 @@ body {
   align-items: center;
   line-height: 1;
   color: #000;
-  flex: 1;
 }
 
 .github-link {
@@ -140,8 +139,6 @@ body {
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
-  margin-left: auto;
-  padding-left: 500px;
 }
 
 .github-link svg {
@@ -326,10 +323,6 @@ img:hover {
 .tag:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.github-link:hover {
-  transform: rotate(5deg) scale(1.1);
 }
 
 .project:hover {
