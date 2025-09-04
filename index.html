@@ -160,61 +160,6 @@
     </main>
   </div>
 
-  <script>
-    // Cursor trail effect with grid-based square pixels
-    let mouseX = 0;
-    let mouseY = 0;
-    let lastGridX = -1;
-    let lastGridY = -1;
-    const gridSize = 10; // Size of each grid cell
-    const activePixels = new Set(); // Track active grid positions
 
-    // Track mouse movement
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      
-      // Calculate grid position
-      const gridX = Math.floor(mouseX / gridSize);
-      const gridY = Math.floor(mouseY / gridSize);
-      const gridKey = `${gridX},${gridY}`;
-      
-      // Only create particle if we moved to a new grid cell and it's not already occupied
-      if ((gridX !== lastGridX || gridY !== lastGridY) && !activePixels.has(gridKey)) {
-        createParticle(gridX, gridY, gridKey);
-        lastGridX = gridX;
-        lastGridY = gridY;
-      }
-    });
-
-    // Create square particle at grid position
-    function createParticle(gridX, gridY, gridKey) {
-      const particle = document.createElement('div');
-      particle.className = 'cursor-particle';
-      
-      // Position exactly on grid
-      const pixelX = gridX * gridSize;
-      const pixelY = gridY * gridSize;
-      
-      particle.style.left = pixelX + 'px';
-      particle.style.top = pixelY + 'px';
-      particle.style.width = gridSize + 'px';
-      particle.style.height = gridSize + 'px';
-      particle.style.background = '#4a90e2';
-      
-      // Mark this grid cell as occupied
-      activePixels.add(gridKey);
-      
-      document.body.appendChild(particle);
-      
-      // Remove particle after animation and free up the grid cell
-      setTimeout(() => {
-        if (particle.parentNode) {
-          particle.parentNode.removeChild(particle);
-          activePixels.delete(gridKey);
-        }
-      }, 1000);
-    }
-  </script>
 </body>
 </html>
