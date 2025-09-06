@@ -341,18 +341,166 @@ html {
   transition: all 0.3s ease;
 }
 
-/* Footer - no bottom margin */
-.footer-section {
-  margin: 60px 0 0 0;
+/* NEW FOOTER STYLES */
+.footer {
+  margin: 60px -48px 0 -48px;
+  width: calc(100% + 96px);
+}
+
+/* Footer CTA Section (Dark) */
+.footer-cta-section {
+  background: #2c2c2c;
+  color: white;
+  padding: 80px 0 80px 0;
   text-align: center;
 }
 
-.footer-image {
+.footer-cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.footer-cta-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 24px 0;
+  color: white;
+}
+
+.footer-cta-section p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 0 0 40px 0;
+  opacity: 0.9;
+  color: white;
+}
+
+.footer-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.email-input {
+  flex: 1;
+  padding: 14px 20px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  background: white;
+  color: #333;
+  outline: none;
+  min-width: 0;
+}
+
+.email-input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.demo-button {
+  padding: 14px 24px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  background: #4a4a4a;
+  color: white;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.demo-button:hover {
+  background: #5a5a5a;
+}
+
+/* Footer Links Section (White) */
+.footer-links-section {
+  background: white;
+  padding: 60px 0 40px 0;
+}
+
+.footer-links-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.footer-tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+  line-height: 1.2;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-column h4 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #333;
+}
+
+.footer-link {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #333;
+}
+
+.footer-text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  display: block;
+}
+
+/* Footer Brand Section */
+.footer-brand-section {
+  background: white;
+  padding: 0 0 0 0;
+  text-align: center;
+}
+
+.footer-brand-image {
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 2px;
+  max-width: 796px;
 }
 
 /* Mobile responsive */
@@ -378,5 +526,51 @@ html {
     padding-left: 5vw; 
     padding-right: 5vw;
     padding-top: 100px;
+  }
+  
+  .footer {
+    margin: 60px calc(-5vw) 0 calc(-5vw);
+    width: calc(100% + 10vw);
+  }
+  
+  .footer-cta-content {
+    padding: 0 5vw;
+  }
+  
+  .footer-links-content {
+    padding: 0 5vw;
+  }
+  
+  .footer-cta-section h2 {
+    font-size: 32px;
+  }
+  
+  .footer-form {
+    flex-direction: column;
+    gap: 12px;
+    max-width: none;
+  }
+  
+  .email-input {
+    border-radius: 25px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .demo-button {
+    border-radius: 25px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .footer-nav {
+    flex-direction: column;
+    gap: 24px;
+    text-align: left;
+  }
+  
+  .footer-tagline {
+    font-size: 28px;
+    text-align: left;
   }
 }
