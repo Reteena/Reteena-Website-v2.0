@@ -7,43 +7,54 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
+  <link href="./style.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="./style.css" rel="stylesheet">
 </head>
 <body>
+  <svg style="display:none;">
+    <filter id="distortion">
+      <feTurbulence type="turbulence" baseFrequency="0.01 0.1" numOctaves="1" result="turbulence"/>
+      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
   <div class="frame">
     <header id="header" class="header">
-      <div class="header-content">
-        <span class="logo">Reteena</span>
-        <div style="flex: 1;"></div>
-        <a href="https://www.linkedin.com/company/reteena" target="_blank" class="linkedin-link" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin" style="color: #000000;"></i>
-        </a>
-        <a href="https://github.com/Reteena" target="_blank" class="github-link" aria-label="GitHub">
-          <svg height="15" viewBox="0 0 16 16" fill="#222" style="vertical-align: middle;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68.003 1.37.092 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.11.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
-        </a>
+      <div class="header-container">
+        <div class="glass-container">
+          <div class="glass-effect-backdrop"></div>
+          <div class="glass-effect top"></div>
+          <div class="glass-effect bottom"></div>
+          <div class="glass-effect left"></div>
+          <div class="glass-effect right"></div>
+        </div>
+        <div class="header-content">
+          <span class="logo">Reteena</span>
+          <div style="flex: 1;"></div>
+          <a href="https://www.linkedin.com/company/reteena" target="_blank" class="linkedin-link" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Reteena" target="_blank" class="github-link" aria-label="GitHub">
+            <svg height="15" viewBox="0 0 16 16" fill="#222" style="vertical-align: middle;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68.003 1.37.092 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.11.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+          </a>
+        </div>
       </div>
     </header>
     
     <main>
       <section class="intro">
-        <h1>It's time to <span class="rethink">rethink</span><br>how we help patients</h1>
-        <p class="subtitle">Reteena is a product development lab focused on creating human-friendly solutions that enable more accessible Alzheimer's diagnosis and therapy</p>
-        <div class="nav-buttons">
-          <div class="nav-button-slider"></div>
-          <button class="nav-button active" data-target="project-1">Remembrance</button>
-          <button class="nav-button" data-target="project-2">Clarity</button>
-          <button class="nav-button" data-target="project-3">GeneAttentionNet</button>
-          <button class="nav-button" data-target="project-4">SALSA</button>
-          <button class="nav-button" data-target="project-5">NeuroMorph</button>
-        </div>
+        <h1>It's time to <span class="rethink-highlight">rethink</span> how we help patients</h1>
+        <p class="subtitle">Reteena is a product development lab focused on creating human-friendly<br>solutions that enable more accessible Alzheimer's diagnosis and therapy</p>
       </section>
       
-      <section class="project" id="project-1">
+      <hr class="divider" />
+      
+      <section class="project">
+        <span class="project-index">01</span>
         <div class="project-header">
           <span class="project-title">Remembrance</span>
           <a href="https://www.youtube.com/watch?v=1qV1wja6c1M&feature=youtu.be" target="_blank" class="button-11">
@@ -52,12 +63,20 @@
           </a>
         </div>
         <img src="image1.png" alt="Remembrance project illustration">
-        <div class="desc">
+        <div class="tags small-tags">
+          <span class="tag">context-aware</span>
+          <span class="tag">emotionally-intelligent</span>
+          <span class="tag">reminiscence therapy</span>
+        </div>
+        <div class="desc justified">
           Remembrance is an emotionally intelligent, context-aware LLM-based memory assistant for Alzheimer's patients, featuring a user interface similar to Obsidian. It delivers reminiscence therapy in a non-intrusive and natural manner while preserving core memories by extracting data from conversations using the LLM
         </div>
       </section>
       
-      <section class="project" id="project-2">
+      <hr class="divider" />
+      
+      <section class="project">
+        <span class="project-index">02</span>
         <div class="project-header">
           <span class="project-title">Low Field MRI Framework</span>
           <a href="https://ieeexplore.ieee.org/document/10826144" target="_blank" class="button-11">
@@ -66,12 +85,20 @@
           </a>
         </div>
         <img src="imageb.png" alt="Clarity Open Source project illustration">
-        <div class="desc">
+        <div class="tags small-tags">    
+          <span class="tag">deep-learning</span>
+          <span class="tag">image-segmentation</span>
+          <span class="tag">open-source</span>
+        </div>
+        <div class="desc justified">
           Clarity is a deep learning framework to enhance low-field MRI scans for segmenting brain regions linked to Alzheimer's Disease and achieved 96% accuracy in automatic AD diagnosis using volumetric data and ensemble ML models. This approach offers a cost-effective, faster alternative to traditional MRI for early AD detection.
         </div>
       </section>
 
-      <section class="project" id="project-3">
+      <hr class="divider" />
+      
+      <section class="project">
+        <span class="project-index">03</span>
         <div class="project-header">
           <span class="project-title">GeneAttentionNet</span>
           <a href="#" target="_blank" class="button-11">
@@ -80,12 +107,20 @@
           </a>
         </div>
         <img src="image1.png" alt="GeneAttentionNet project illustration">
-        <div class="desc">
-          Clarity is a deep learning framework to enhance low-field MRI scans for segmenting brain regions linked to Alzheimer's Disease and achieved 96% accuracy in automatic AD diagnosis using volumetric data and ensemble ML models. This approach offers a cost-effective alternative to traditional MRI for early AD detection, aiding timely intervention.
+        <div class="tags small-tags">
+          <span class="tag">genomics</span>
+          <span class="tag">attention-mechanism</span>
+          <span class="tag">ML</span>
+        </div>
+        <div class="desc justified">
+          GeneAttentionNet uses advanced attention mechanisms to analyze genetic data for Alzheimer's risk prediction. This approach offers interpretable insights into genetic factors contributing to disease progression.
         </div>
       </section>
 
-      <section class="project" id="project-4">
+      <hr class="divider" />
+      
+      <section class="project">
+        <span class="project-index">04</span>
         <div class="project-header">
           <span class="project-title">SALSA</span>
           <a href="#" target="_blank" class="button-11">
@@ -94,12 +129,20 @@
           </a>
         </div>
         <img src="imageb.png" alt="SALSA project illustration">
-        <div class="desc">
+        <div class="tags small-tags">
+          <span class="tag">speech-analysis</span>
+          <span class="tag">low-compute</span>
+          <span class="tag">accessible</span>
+        </div>
+        <div class="desc justified">
           Simple Adapter-based Low-compute Speech Analysis for Alzheimer's Across Corpora (SALSA) is a lightweight and accessible framework for detecting Alzheimer's disease from spontaneous speech while maintaining strong generalization across datasets and microphones. Rather than retraining large models, SALSA freezes a pre-trained self-supervised model.
         </div>
       </section>
 
-      <section class="project" id="project-5">
+      <hr class="divider" />
+      
+      <section class="project">
+        <span class="project-index">05</span>
         <div class="project-header">
           <span class="project-title">NeuroMorph</span>
           <a href="#" target="_blank" class="button-11">
@@ -108,8 +151,13 @@
           </a>
         </div>
         <img src="image1.png" alt="NeuroMorph project illustration">
-        <div class="desc">
-          Simple Adapter-based Low-compute Speech Analysis for Alzheimer's Across Corpora (SALSA) is a lightweight and accessible framework for detecting Alzheimer's disease from spontaneous speech while maintaining strong generalization across datasets and microphones. Rather than retraining large models, SALSA freezes a pre-trained self-supervised model.
+        <div class="tags small-tags">
+          <span class="tag">neuroimaging</span>
+          <span class="tag">morphology</span>
+          <span class="tag">3D-analysis</span>
+        </div>
+        <div class="desc justified">
+          NeuroMorph provides advanced 3D morphological analysis of brain structures to identify early markers of Alzheimer's disease through detailed volumetric and shape-based assessments.
         </div>
       </section>
       
@@ -120,56 +168,14 @@
   </div>
 
   <script>
-    // Navigation button slider
-    const navButtons = document.querySelectorAll('.nav-button');
-    const slider = document.querySelector('.nav-button-slider');
-    
-    function updateSlider(button) {
-      const buttonRect = button.getBoundingClientRect();
-      const containerRect = button.parentElement.getBoundingClientRect();
-      
-      slider.style.width = buttonRect.width + 'px';
-      slider.style.left = (buttonRect.left - containerRect.left) + 'px';
-    }
-    
-    // Initialize slider position after a short delay to ensure layout is ready
-    setTimeout(() => {
-      const activeButton = document.querySelector('.nav-button.active');
-      if (activeButton) {
-        updateSlider(activeButton);
+    // Add scroll effect for header
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
       }
-    }, 100);
-    
-    navButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        // Remove active class from all buttons
-        navButtons.forEach(btn => btn.classList.remove('active'));
-        
-        // Add active class to clicked button
-        this.classList.add('active');
-        
-        // Update slider position
-        updateSlider(this);
-        
-        // Scroll to target
-        const targetId = this.getAttribute('data-target');
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-        }
-      });
-    });
-    
-    // Update slider on window resize with debounce
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        const activeButton = document.querySelector('.nav-button.active');
-        if (activeButton) {
-          updateSlider(activeButton);
-        }
-      }, 100);
     });
   </script>
 </body>
