@@ -113,10 +113,7 @@
           <span class="tag">ML</span>
         </div>
         <div class="desc justified">
-          GeneAttentionNet uses advanced attention mechanisms to analyze genetic data for Alzheimer's risk prediction. This approach offers interpretable insights into genetic factors contributing to disease progression.
-        </div>
-      </section>
-
+          GeneAttentionNet is designed to classify Alzheimer’s disease using high-dimensional gene expression data. Unlike traditional models that treat genes as isolated features, GeneAttentionNet uses attention mechanisms to uncover meaningful relationships between genes, mimicking how biological systems interact. GeneAttentionNet outperformed standard multilayer perceptrons by nearly 8% and Random Forests by 38%.
       <hr class="divider" />
       
       <section class="project">
@@ -135,7 +132,7 @@
           <span class="tag">accessible</span>
         </div>
         <div class="desc justified">
-          Simple Adapter-based Low-compute Speech Analysis for Alzheimer's Across Corpora (SALSA) is a lightweight and accessible framework for detecting Alzheimer's disease from spontaneous speech while maintaining strong generalization across datasets and microphones. Rather than retraining large models, SALSA freezes a pre-trained self-supervised model.
+          Simple Adapter-based Low-compute Speech Analysis for Alzheimer's Across Corpora (SALSA) is a lightweight and accessible framework for detecting Alzheimer’s disease from spontaneous speech while maintaining strong generalization across datasets and microphones. Rather than retraining large models, SALSA freezes a pre-trained self-supervised speech encoder and adds small, efficient LoRA adapters to capture task-specific details. It combines acoustic embeddings with lexical cues from automatic transcripts and uses Group Distributionally Robust Optimization (GroupDRO) to address variations across different datasets. Designed to run efficiently on a single consumer GPU or even a CPU, SALSA demonstrates strong cross-corpus generalization on benchmarks such as ADReSS 2020
         </div>
       </section>
 
@@ -144,7 +141,7 @@
       <section class="project">
         <span class="project-index">05</span>
         <div class="project-header">
-          <span class="project-title">NeuroMorph</span>
+          <span class="project-title">NeuroMorphLite-fMRI</span>
           <a href="#" target="_blank" class="button-11">
             Learn More
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1-2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
@@ -157,7 +154,7 @@
           <span class="tag">3D-analysis</span>
         </div>
         <div class="desc justified">
-          NeuroMorph provides advanced 3D morphological analysis of brain structures to identify early markers of Alzheimer's disease through detailed volumetric and shape-based assessments.
+          NeuroMorphLite-fMRI is a lightweight framework that merges deep learning and reinforcement learning to enhance fMRI-based Alzheimer’s research. Built on open datasets such as ADNI and OASIS, it uses CNN and Transformer backbones for high-fidelity brain reconstruction while keeping computational demands low. A reinforcement agent dynamically tunes regularization and identifies regions of interest, like the hippocampus and cortex, to optimize both image clarity and diagnostic accuracy. NeuroMorphLite-fMRI enables efficient, interpretable neuroimaging analysis that brings precision modeling within reach of everyday research environments.
         </div>
       </section>
       
