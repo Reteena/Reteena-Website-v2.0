@@ -68,9 +68,13 @@
           <span class="tag">emotionally-intelligent</span>
           <span class="tag">reminiscence therapy</span>
         </div>
-        <div class="desc justified">
-          Remembrance is an emotionally intelligent, context-aware LLM-based memory assistant for Alzheimer's patients, featuring a user interface similar to Obsidian. It delivers reminiscence therapy in a non-intrusive and natural manner while preserving core memories by extracting data from conversations using the LLM
+        <div class="desc justified collapsed" data-project="1">
+          Remembrance is an emotionally intelligent, context-aware LLM-based memory assistant for Alzheimer's patients. It features a user interface similar to Obsidian and delivers reminiscence therapy in a non-intrusive manner. The system preserves core memories by extracting data from conversations using advanced language models.
         </div>
+        <button class="expand-btn" onclick="toggleExpand(1)">
+          Expand
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
       </section>
       
       <hr class="divider" />
@@ -90,9 +94,13 @@
           <span class="tag">image-segmentation</span>
           <span class="tag">open-source</span>
         </div>
-        <div class="desc justified">
-          Clarity is a deep learning framework to enhance low-field MRI scans for segmenting brain regions linked to Alzheimer's Disease and achieved 96% accuracy in automatic AD diagnosis using volumetric data and ensemble ML models. This approach offers a cost-effective, faster alternative to traditional MRI for early AD detection.
+        <div class="desc justified collapsed" data-project="2">
+          Clarity is a deep learning framework that enhances low-field MRI scans for segmenting brain regions linked to Alzheimer's Disease. It achieved 96% accuracy in automatic AD diagnosis using volumetric data and ensemble ML models. This approach offers a cost-effective, faster alternative to traditional MRI for early AD detection.
         </div>
+        <button class="expand-btn" onclick="toggleExpand(2)">
+          Expand
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
       </section>
 
       <hr class="divider" />
@@ -112,8 +120,15 @@
           <span class="tag">attention-mechanism</span>
           <span class="tag">ML</span>
         </div>
-        <div class="desc justified">
-          GeneAttentionNet is designed to classify Alzheimer’s disease using high-dimensional gene expression data. Unlike traditional models that treat genes as isolated features, GeneAttentionNet uses attention mechanisms to uncover meaningful relationships between genes, mimicking how biological systems interact. GeneAttentionNet outperformed standard multilayer perceptrons by nearly 8% and Random Forests by 38%.
+        <div class="desc justified collapsed" data-project="3">
+          GeneAttentionNet classifies Alzheimer's disease using high-dimensional gene expression data with attention mechanisms to uncover meaningful gene relationships. Unlike traditional models treating genes as isolated features, it mimics biological system interactions. The model outperformed standard multilayer perceptrons by nearly 8% and Random Forests by 38%.
+        </div>
+        <button class="expand-btn" onclick="toggleExpand(3)">
+          Expand
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+      </section>
+      
       <hr class="divider" />
       
       <section class="project">
@@ -131,9 +146,13 @@
           <span class="tag">low-compute</span>
           <span class="tag">accessible</span>
         </div>
-        <div class="desc justified">
-          Simple Adapter-based Low-compute Speech Analysis for Alzheimer's Across Corpora (SALSA) is a lightweight framework for detecting Alzheimer's disease from spontaneous speech while maintaining strong generalization across datasets and microphones. Rather than retraining large models, SALSA freezes a pre-trained self-supervised speech encoder and adds small LoRA adapters to capture task-specific details. It combines acoustic embeddings with lexical cues from automatic transcripts and uses Group Distributionally Robust Optimization (GroupDRO) to address variations across datasets. Designed to run remarkably efficiently on a single consumer GPU or CPU, SALSA demonstrates strong cross-corpus generalization on benchmarks such as ADReSS 2020
+        <div class="desc justified collapsed" data-project="4">
+          SALSA is a lightweight framework for detecting Alzheimer's from spontaneous speech while maintaining strong generalization across datasets. It uses frozen pre-trained encoders with LoRA adapters and combines acoustic embeddings with lexical cues. Designed to run efficiently on consumer hardware, it demonstrates strong cross-corpus performance on benchmarks like ADReSS 2020.
         </div>
+        <button class="expand-btn" onclick="toggleExpand(4)">
+          Expand
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
       </section>
 
       <hr class="divider" />
@@ -153,12 +172,16 @@
           <span class="tag">morphology</span>
           <span class="tag">3D-analysis</span>
         </div>
-        <div class="desc justified">
-          NeuroMorphLite-fMRI is a lightweight framework that merges deep learning and reinforcement learning to enhance fMRI-based Alzheimer's research. Built on datasets such as ADNI and OASIS, it uses CNN and Transformer backbones for high-fidelity brain reconstruction while keeping computational demands low. A reinforcement agent tunes regularization and identifies regions of interest, like the hippocampus and cortex, to optimize both image clarity and diagnostic accuracy. NeuroMorphLite-fMRI enables efficient, interpretable neuroimaging analysis that brings precision modeling within reach of research environments
+        <div class="desc justified collapsed" data-project="5">
+          NeuroMorphLite-fMRI merges deep learning and reinforcement learning to enhance fMRI-based Alzheimer's research with low computational demands. Built on ADNI and OASIS datasets, it uses CNN and Transformer backbones for high-fidelity brain reconstruction. A reinforcement agent optimizes regularization and identifies key regions like the hippocampus for both image clarity and diagnostic accuracy.
         </div>
+        <button class="expand-btn" onclick="toggleExpand(5)">
+          Expand
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
       </section>
       
-</main>
+    </main>
     
     <div class="footer-section">
       <img src="footer.png" alt="Reteena footer" class="footer-image">
@@ -175,6 +198,22 @@
         header.classList.remove('scrolled');
       }
     });
+
+    // Toggle expand/collapse functionality
+    function toggleExpand(projectNum) {
+      const desc = document.querySelector(`[data-project="${projectNum}"]`);
+      const btn = event.currentTarget;
+      
+      if (desc.classList.contains('collapsed')) {
+        desc.classList.remove('collapsed');
+        btn.innerHTML = 'Collapse <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+        btn.classList.add('expanded');
+      } else {
+        desc.classList.add('collapsed');
+        btn.innerHTML = 'Expand <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+        btn.classList.remove('expanded');
+      }
+    }
   </script>
 </body>
 </html>
