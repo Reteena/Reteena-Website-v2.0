@@ -354,7 +354,9 @@ main {
 /* Footer */
 .footer-section {
   margin: 0;
+  padding: 0;
   text-align: center;
+  line-height: 0;
 }
 
 .footer-image {
@@ -362,6 +364,8 @@ main {
   height: auto;
   display: block;
   margin: 0;
+  padding: 0;
+  vertical-align: bottom;
 }
 
 /* Smooth scroll behavior */
