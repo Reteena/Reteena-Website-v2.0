@@ -476,6 +476,15 @@ html {
   scroll-behavior: smooth;
 }
 
+.project img {
+  position: relative;
+  z-index: 1;
+}
+
+.project-header {
+  z-index: 999;
+}
+
 /* Mobile responsive */
 @media screen and (max-width: 780px) {
   .frame { 
