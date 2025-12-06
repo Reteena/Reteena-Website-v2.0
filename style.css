@@ -35,6 +35,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 0;
   transition: all 0.3s ease;
+  z-index: 1
 }
 
 /* Scrolled state - show liquid glass effect */
@@ -527,3 +528,13 @@ html {
     gap: 8px;
   }
 }
+
+.header {
+  pointer-events: none; 
+}
+
+.header-content,
+.header-content * {
+  pointer-events: auto;
+}
+
